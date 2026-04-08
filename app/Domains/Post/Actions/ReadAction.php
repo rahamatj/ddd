@@ -13,7 +13,7 @@ class ReadAction
 
     public function execute(ReadPostDTO $dto)
     {
-        return $this->postService->readPost([
+        return $this->postService->read([
 			'title' => $dto->title,
 			'description' => $dto->description
         ]);

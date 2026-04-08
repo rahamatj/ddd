@@ -2,8 +2,7 @@
 
 namespace App\Domains\Post\Repositories\Contracts;
 
-use App\Domains\Post\Requests\StoreRequest;
-use App\Domains\Post\Requests\UpdateRequest;
+
 
 interface PostRepositoryInterface
 {
@@ -11,13 +10,13 @@ interface PostRepositoryInterface
 
     public function create();
 
-    public function store(StoreRequest $request);
+    public function store(array $data);
 
-    public function show(Post $post);
+    public function show($id);
 
-    public function edit(Post $post);
+    public function edit($id);
 
-    public function update(UpdateRequest $request, Post $post);
+    public function update($id, array $data);
 
-    public function destroy(Post $post);
+    public function destroy($id);
 }

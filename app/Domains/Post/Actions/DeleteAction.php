@@ -13,7 +13,7 @@ class DeleteAction
 
     public function execute(DeletePostDTO $dto)
     {
-        return $this->postService->deletePost([
+        return $this->postService->delete([
 			'title' => $dto->title,
 			'description' => $dto->description
         ]);

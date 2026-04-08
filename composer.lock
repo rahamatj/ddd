@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7c4a9d91d589a84034d1185e1be3fdf1",
+    "content-hash": "6b5586acf2538f538b98fa3b1009abed",
     "packages": [
         {
             "name": "brick/math",
@@ -3102,21 +3102,22 @@
         },
         {
             "name": "raham/dddcrudgen",
-            "version": "1.0.0",
+            "version": "dev-main",
             "source": {
                 "type": "git",
-                "url": "https://github.com/rahamatj/dddcrudgenerator.git",
-                "reference": "8bf764057504be9321c11d45cbea73e44d662d2a"
+                "url": "https://github.com/rahamatj/dddcrudgen.git",
+                "reference": "3296f71c01c16cf399922c0e13f580415b0fba09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rahamatj/dddcrudgenerator/zipball/8bf764057504be9321c11d45cbea73e44d662d2a",
-                "reference": "8bf764057504be9321c11d45cbea73e44d662d2a",
+                "url": "https://api.github.com/repos/rahamatj/dddcrudgen/zipball/3296f71c01c16cf399922c0e13f580415b0fba09",
+                "reference": "3296f71c01c16cf399922c0e13f580415b0fba09",
                 "shasum": ""
             },
             "require": {
                 "php": "^8.0"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -3139,10 +3140,10 @@
             ],
             "description": "A Laravel package for DDD CRUD generation.",
             "support": {
-                "issues": "https://github.com/rahamatj/dddcrudgenerator/issues",
-                "source": "https://github.com/rahamatj/dddcrudgenerator/tree/1.0.0"
+                "issues": "https://github.com/rahamatj/dddcrudgen/issues",
+                "source": "https://github.com/rahamatj/dddcrudgen/tree/main"
             },
-            "time": "2026-03-18T07:58:00+00:00"
+            "time": "2026-04-05T05:57:49+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -9143,12 +9144,14 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "raham/dddcrudgen": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.3"
     },
     "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }

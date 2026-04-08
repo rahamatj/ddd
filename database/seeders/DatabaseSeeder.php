@@ -21,5 +21,9 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+
+        
+		\App\Domains\Post\Models\Post::factory()->count(20)->create();
+		// append
     }
 }

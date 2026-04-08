@@ -13,7 +13,7 @@ class CreateAction
 
     public function execute(CreatePostDTO $dto)
     {
-        return $this->postService->createPost([
+        return $this->postService->create([
 			'title' => $dto->title,
 			'description' => $dto->description
         ]);

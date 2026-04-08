@@ -21,19 +21,19 @@ class PostService
         return $this->postRepository->store($data);
     }
 
-    public function show($data)
+    public function show($id)
     {
-        return $this->postRepository->show($data); 
+        return $this->postRepository->show($id); 
     }
 
-    public function update($data)
+    public function update($id, $data)
     {
-        return $this->postRepository->update($data);
+        return $this->postRepository->update($id, $data);
     }
 
-    public function destroy($data)
+    public function destroy($id)
     {
-        return $this->postRepository->destroy($data);
+        return $this->postRepository->destroy($id);
     }
 }
 

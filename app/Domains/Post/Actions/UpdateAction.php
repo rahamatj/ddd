@@ -13,7 +13,7 @@ class UpdateAction
 
     public function execute(UpdatePostDTO $dto)
     {
-        return $this->postService->updatePost([
+        return $this->postService->update([
 			'title' => $dto->title,
 			'description' => $dto->description
         ]);
