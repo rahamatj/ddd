@@ -11,11 +11,8 @@ class ReadAction
         protected PostService $postService
     ) {}
 
-    public function execute(ReadPostDTO $dto)
+    public function execute()
     {
-        return $this->postService->read([
-			'title' => $dto->title,
-			'description' => $dto->description
-        ]);
+        return $this->postService->read();
     }
 }

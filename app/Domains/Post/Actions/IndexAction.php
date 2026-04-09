@@ -2,7 +2,7 @@
 
 namespace App\Domains\Post\Actions;
 
-use App\Domains\Post\DTO\PostDTO;
+use App\Domains\Post\DTO\CreatePostDTO;
 use App\Domains\Post\Services\PostService;
 
 class IndexAction

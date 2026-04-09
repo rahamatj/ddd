@@ -11,11 +11,8 @@ class UpdateAction
         protected PostService $postService
     ) {}
 
-    public function execute(UpdatePostDTO $dto)
+    public function execute()
     {
-        return $this->postService->update([
-			'title' => $dto->title,
-			'description' => $dto->description
-        ]);
+        return $this->postService->update();
     }
 }

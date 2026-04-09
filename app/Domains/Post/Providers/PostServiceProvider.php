@@ -20,11 +20,6 @@ class PostServiceProvider extends ServiceProvider
             PostRepositoryInterface::class,
             PostRepository::class
         );
-
-        $this->app->bind(
-            ResponderInterface::class,
-            WebResponder::class
-        );
     }
 
     /**

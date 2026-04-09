@@ -11,11 +11,8 @@ class CreateAction
         protected PostService $postService
     ) {}
 
-    public function execute(CreatePostDTO $dto)
+    public function execute()
     {
-        return $this->postService->create([
-			'title' => $dto->title,
-			'description' => $dto->description
-        ]);
+        return $this->postService->create();
     }
 }

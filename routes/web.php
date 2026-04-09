@@ -8,4 +8,6 @@ Route::get('/', function () {
     return 'hello world';
 });
 
-Route::get('/posts', [PostController::class, 'index']);
+Route::resource('posts', PostController::class);
+
+// append

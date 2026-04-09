@@ -5,7 +5,6 @@ namespace App\Domains\Post\Repositories;
 use App\Domains\Post\Repositories\Contracts\PostRepositoryInterface;
 use App\Domains\Post\Models\Post;
 
-
 class PostRepository implements PostRepositoryInterface
 {
     public function index()
@@ -13,7 +12,9 @@ class PostRepository implements PostRepositoryInterface
         return Post::all();
     }
 
-    public function store(array $data)
+    public function create() {}
+
+    public function store($data)
     {
         return Post::create($data);
     }
@@ -23,7 +24,9 @@ class PostRepository implements PostRepositoryInterface
         return Post::findOrFail($id);
     }
 
-    public function update($id, array $data)
+    public function edit($id) {}
+
+    public function update($id, $data)
     {
         $post = Post::findOrFail($id);
         $post->update($data);
