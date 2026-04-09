@@ -8,15 +8,14 @@ use App\Domains\Post\Actions\CreateAction;
 use App\Domains\Post\Actions\ReadAction;
 use App\Domains\Post\Actions\UpdateAction;
 use App\Domains\Post\Actions\DeleteAction;
-
 use App\Domains\Post\Requests\StoreRequest;
 use App\Domains\Post\Requests\UpdateRequest;
-
-use App\Domains\Post\Responders\Contracts\IndexAPIResponderInterface;
+use App\Domains\Post\Responders\Contracts\ResponderInterface;
+use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    protected $switch;
+    protected string $switch;
 
     public function __construct(
         protected IndexAction $indexAction,
@@ -28,32 +27,53 @@ class PostController extends Controller
         $this->switch = config('ddd.response');
     }
 
-
-
-    public function index(IndexAPIResponderInterface $responder)
+    /**
+     * Display a listing of the resource.
+     */
+    public function index(ResponderInterface $responder)
     {
         $data = $this->indexAction->execute();
 
         return $responder->respond($data);
     }
 
-    public function store(StoreRequest $request)
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
     {
-        return $this->createAction->execute($request->validated());
+        //
     }
 
-    public function show($id)
+    /**
+     * Display the specified resource.
+     */
+    public function show(string $id)
     {
-        return $this->readAction->execute($id);
+        //
     }
 
-    public function update(UpdateRequest $request, $id)
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(string $id)
     {
-        return $this->updateAction->execute($id, $request->validated());
+        //
     }
 
-    public function destroy($id)
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id)
     {
-        return $this->deleteAction->execute($id);
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(string $id)
+    {
+        //
     }
 }

@@ -2,7 +2,7 @@
 
 namespace App\Domains\Post\Responders\Contracts;
 
-interface IndexAPIResponderInterface
+interface ResponderInterface
 {
     public function respond($data);
 }

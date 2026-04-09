@@ -2,7 +2,7 @@
 
 namespace App\Domains\Post\DTO;
 
-class CreateDTO
+class PostDTO
 {
     public function __construct(
 			public $title,

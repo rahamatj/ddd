@@ -24,6 +24,8 @@ class DatabaseSeeder extends Seeder
 
         
 		\App\Domains\Post\Models\Post::factory()->count(20)->create();
+		
+		\App\Domains\Category\Models\Category::factory()->count(10)->create();
 		// append
     }
 }

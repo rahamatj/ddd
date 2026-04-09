@@ -13,22 +13,12 @@ class PostRepository implements PostRepositoryInterface
         return Post::all();
     }
 
-    public function create()
-    {
-        return new Post();
-    }
-
     public function store(array $data)
     {
         return Post::create($data);
     }
 
     public function show($id)
-    {
-        return Post::findOrFail($id);
-    }
-
-    public function edit($id)
     {
         return Post::findOrFail($id);
     }
