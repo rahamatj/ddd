@@ -1,20 +1,20 @@
 <?php
 
-namespace App\Domains\Post\Controllers;
+namespace App\Domains\Category\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Domains\Post\Actions\IndexAction;
-use App\Domains\Post\Actions\CreateAction;
-use App\Domains\Post\Actions\StoreAction;
-use App\Domains\Post\Actions\ShowAction;
-use App\Domains\Post\Actions\UpdateAction;
-use App\Domains\Post\Actions\DestroyAction;
-use App\Domains\Post\Requests\StoreRequest;
-use App\Domains\Post\Requests\UpdateRequest;
-use App\Domains\Post\Responders\Responder;
-use App\Domains\Post\Models\Post;
+use App\Domains\Category\Actions\IndexAction;
+use App\Domains\Category\Actions\CreateAction;
+use App\Domains\Category\Actions\StoreAction;
+use App\Domains\Category\Actions\ShowAction;
+use App\Domains\Category\Actions\UpdateAction;
+use App\Domains\Category\Actions\DestroyAction;
+use App\Domains\Category\Requests\StoreRequest;
+use App\Domains\Category\Requests\UpdateRequest;
+use App\Domains\Category\Responders\Responder;
+use App\Domains\Category\Models\Category;
 
-class PostController extends Controller
+class CategoryController extends Controller
 {
     public function __construct(
         protected IndexAction $indexAction,
@@ -60,27 +60,27 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Post $Post)
+    public function show(Category $Category)
     {
         return responder()->respond()->withJSON([
-            'data' => $Post
+            'data' => $Category
         ]);
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Post $Post)
+    public function edit(Category $Category)
     {
         return responder()->respond()->withView('posts.edit', [
-            'data' => $Post
+            'data' => $Category
         ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateRequest $request, Post $Post)
+    public function update(UpdateRequest $request, Category $Category)
     {
         $data = $this->updateAction->execute($request->validated());
 
@@ -92,7 +92,7 @@ class PostController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Post $Post)
+    public function destroy(Category $Category)
     {
         $data = $this->destroyAction->execute();
 

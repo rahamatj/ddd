@@ -3,11 +3,11 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use App\Domains\Category\Models\Category;
+use App\Domains\Teacher\Models\Teacher;
 
-class CategoryFactory extends Factory
+class TeacherFactory extends Factory
 {
-    protected $model = Category::class;
+    protected $model = Teacher::class;
 
     /**
      * Define the model's default state.
@@ -17,8 +17,8 @@ class CategoryFactory extends Factory
     public function definition(): array
     {
         return [
-			'name' => fake()->sentence(),
-			'description' => fake()->paragraph(),
+			'name' => fake()->name(),
+			'course' => fake()->word(),
         ];
     }
 }

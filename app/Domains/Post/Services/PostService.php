@@ -31,9 +31,9 @@ class PostService
         return $this->postRepository->update($id, $data);
     }
 
-    public function destroy($id)
+    public function destroy($data)
     {
-        return $this->postRepository->destroy($id);
+        return $this->postRepository->destroy($data);
     }
 }
 

@@ -9,5 +9,6 @@ Route::get('/', function () {
 });
 
 Route::resource('posts', PostController::class);
+Route::resource('categories', CategoryController::class);
 
 // append

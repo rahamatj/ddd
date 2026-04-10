@@ -2,8 +2,7 @@
 
 namespace App\Domains\Post\Actions;
 
-use App\Domains\Post\DTO\CreatePostDTO;
-use App\Domains\Post\Services\PostService;
+use App\Domains\Post\Services\PostService;;
 
 class CreateAction
 {
@@ -11,8 +10,11 @@ class CreateAction
         protected PostService $postService
     ) {}
 
-    public function execute()
+    public function execute($data = [])
     {
-        return $this->postService->create();
+        if (!empty($data))
+            return $this->postService->create($data);
+        else
+            return $this->postService->create();
     }
 }

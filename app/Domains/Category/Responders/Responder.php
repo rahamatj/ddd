@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domains\Post\Responders;
+namespace App\Domains\Category\Responders;
 
 class Responder
 {

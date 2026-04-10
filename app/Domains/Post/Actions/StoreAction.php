@@ -4,7 +4,7 @@ namespace App\Domains\Post\Actions;
 
 use App\Domains\Post\Services\PostService;;
 
-class UpdateAction
+class StoreAction
 {
     public function __construct(
         protected PostService $postService
@@ -13,8 +13,8 @@ class UpdateAction
     public function execute($data = [])
     {
         if (!empty($data))
-            return $this->postService->update($data);
+            return $this->postService->store($data);
         else
-            return $this->postService->update();
+            return $this->postService->store();
     }
 }
