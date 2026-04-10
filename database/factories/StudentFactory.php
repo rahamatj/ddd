@@ -17,8 +17,8 @@ class StudentFactory extends Factory
     public function definition(): array
     {
         return [
-			'name' => fake()->sentence(),
-			'roll' => fake()->uuid(),
+			'name' => fake()->word(),
+			'age' => fake()->randomNumber(),
         ];
     }
 }
