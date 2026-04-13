@@ -18,4 +18,8 @@ Route::resource('teachers', \App\Domains\Teacher\Controllers\TeacherController::
 Route::resource('products', \App\Domains\Product\Controllers\ProductController::class);
 
 Route::resource('admins', \App\Domains\Admin\Controllers\AdminController::class);
+
+Route::resource('employees', \App\Domains\Employee\Controllers\EmployeeController::class);
+
+Route::resource('radios', \App\Domains\Radio\Controllers\RadioController::class);
 // append

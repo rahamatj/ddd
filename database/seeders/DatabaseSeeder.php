@@ -29,6 +29,10 @@ class DatabaseSeeder extends Seeder
 		\App\Domains\Product\Models\Product::factory()->count(30)->create();
 		
 		\App\Domains\Admin\Models\Admin::factory()->count(30)->create();
+		
+		\App\Domains\Employee\Models\Employee::factory()->count(30)->create();
+		
+		\App\Domains\Radio\Models\Radio::factory()->count(30)->create();
 		// append
     }
 }

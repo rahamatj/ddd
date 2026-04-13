@@ -17,7 +17,11 @@ class RepositoryServiceProvider extends ServiceProvider
 				$this->app->bind(\App\Domains\Teacher\Repositories\Contracts\TeacherRepositoryInterface::class, \App\Domains\Teacher\Repositories\TeacherRepository::class);
 				$this->app->bind(\App\Domains\Product\Repositories\Contracts\ProductRepositoryInterface::class, \App\Domains\Product\Repositories\ProductRepository::class);
 				$this->app->bind(\App\Domains\Admin\Repositories\Contracts\AdminRepositoryInterface::class, \App\Domains\Admin\Repositories\AdminRepository::class);
+				$this->app->bind(\App\Domains\Employee\Repositories\Contracts\EmployeeRepositoryInterface::class, \App\Domains\Employee\Repositories\EmployeeRepository::class);
+				$this->app->bind(\App\Domains\Radio\Repositories\Contracts\RadioRepositoryInterface::class, \App\Domains\Radio\Repositories\RadioRepository::class);
 		// append
+
+
 
 
 
